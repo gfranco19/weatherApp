@@ -20,7 +20,7 @@ $(document).ready(function() {
     function searchWeather(searchValue) {
       $.ajax({
         type: "GET",
-        url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=5a9d1eb3c762ddd88f010f884b4adc7c",
+        url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=5a9d1eb3c762ddd88f010f884b4adc7c&units=imperial",
         dataType: "json",
         success: function(data) {
           // create history link for this search
@@ -59,7 +59,7 @@ $(document).ready(function() {
     function getForecast(searchValue) {
       $.ajax({
         type: "GET",
-        url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=5a9d1eb3c762ddd88f010f884b4adc7c",
+        url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=5a9d1eb3c762ddd88f010f884b4adc7c&units=imperial",
         dataType: "json",
         success: function(data) {
           // overwrite any existing content with title and empty row
